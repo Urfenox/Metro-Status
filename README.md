@@ -1,8 +1,20 @@
-# React + Vite
+# Metro status API
+https://www.metro.cl/api/estadoRedDetalle.php
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+OJITO con el CORS.
 
-Currently, two official plugins are available:
+## Estados
+Metro de Santiago tiene los siguientes estados:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Para las líneas:  
+
+ 1. Línea disponible
+ 2. ---
+ 3. ---
+
+Para las estaciones:  
+
+ 1. Estación Operativa
+ 2. ---
+ 3. ---
+

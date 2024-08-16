@@ -8,7 +8,7 @@ import {
   ListItemText,
   Typography,
 } from "@mui/material";
-import { red, green } from "@mui/material/colors";
+import { red, green, lightGreen } from "@mui/material/colors";
 import { useState, useEffect } from "react";
 
 // https://www.metro.cl/api/estadoRedDetalle.php <- BASADA EN ESTA API
@@ -16,6 +16,15 @@ import { useState, useEffect } from "react";
 
 function App() {
   const [lineas, setLineas] = useState([]);
+  const colorLineas = {
+    L1: "#ec1d25",
+    L2: "#f7941d",
+    L3: "#994807",
+    L4: "#2e3192",
+    L4A: "#05adf4",
+    L5: "#0b9444",
+    L6: "#a35db5",
+  };
 
   useEffect(() => {
     // obtenerLineas();
@@ -24,6 +33,7 @@ function App() {
 
   async function obtenerLineas() {
     fetch("https://www.metro.cl/api/estadoRedDetalle.php", {
+      // fetch("estadoRedDetalle.php.json", {
       method: "GET",
     })
       .then((respuesta) => respuesta.json())
@@ -40,7 +50,11 @@ function App() {
             <Grid item md={1.7} key={i} style={{ textAlign: "center" }}>
               {/* LINEAS */}
               <Typography
-                bgcolor={value.estado != "1" ? red["A700"] : green["A700"]}
+                color={colorLineas[key.toUpperCase()]}
+                borderRadius={3}
+                fontSize={70}
+                fontWeight={900}
+                bgcolor={value.estado != "1" ? red["A700"] : lightGreen["A400"]}
                 variant="h2"
               >
                 {key.toUpperCase()}
