@@ -9,12 +9,12 @@ function App() {
   const [lineas, setLineas] = useState([]);
 
   useEffect(() => {
-    obtenerLineas();
-    // setInterval(obtenerLineas, 2000);
+    // obtenerLineas();
+    setInterval(obtenerLineas, 2000);
   }, []);
 
   function obtenerLineas() {
-    fetch("https://www.metro.cl/api/estadoRedDetalle.php", {
+    fetch("estadoRedDetalle.php.json", {
       method: "GET",
     })
       .then((respuesta) => respuesta.json())
@@ -32,7 +32,7 @@ function App() {
             <Grid item md={1.7} key={i} style={{ textAlign: "center" }}>
               {/* LINEAS */}
               <Typography
-                bgcolor={value.estado > 0 ? red["A700"] : green["A700"]}
+                bgcolor={value.estado != "1" ? red["A700"] : green["A700"]}
                 variant="h2"
               >
                 {key.toUpperCase()}
@@ -53,7 +53,7 @@ function App() {
                     <Grid item xs={12} key={i2} style={{ textAlign: "center" }}>
                       {/* ESTACIONES */}
                       <Typography
-                        color={value2.estado > 0 ? red["A700"] : green["A700"]}
+                        color={value2.estado != "1" ? red["A700"] : green["A700"]}
                         variant="h6"
                       >
                         {value2["nombre"]
