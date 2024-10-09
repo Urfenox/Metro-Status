@@ -10,7 +10,7 @@ Para las líneas:
 
  1. Línea disponible
  2. Estaciones cerradas
- 3. ---
+ 3. Servicio interrumpido
  4. Retraso en frecuencia*
 
 Para las estaciones:  
