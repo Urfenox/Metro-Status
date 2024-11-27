@@ -11,14 +11,15 @@ Para las líneas:
  1. Línea disponible
  2. Estaciones cerradas
  3. Servicio interrumpido
- 4. Retraso en frecuencia*
+ 4. Retraso en frecuencia
+ 5. Combinaciones suspendidas
 
 Para las estaciones:  
 
  1. Estación Operativa
  2. Estación Temporalmente Cerrada
  3. ---
- 4. ---
+ 4. Accesos Cerrados
 
 > Literalmente espero dia a dia para ver cada tipo de estado posible.  
 
